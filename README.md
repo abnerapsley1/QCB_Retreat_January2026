@@ -9,8 +9,12 @@ The overall aim of a whole-cell model is to provide a comprehensive description 
 ![Demo Image](Images/FULL_QCB_Retreat_01_26_2026.png)
 
 ## The Cell State and Initialization ##
+All whole-cell models require both a definition of and initial conditions for the cell state. 
+
+![Demo Image](Images/ONE_QCB_Retreat_01_26_2026.png)
 
 ### Hierarchical Levels of Organization ###
+Defining the cell state is accomplished first by defining hierarchical levels of organization. These levels can vary across whole-cell models, but should encompass the most fine-grained level of organization (can be atoms or "effective" atoms) through the most coarse-grained level (usualy the cell itself).
 
 ### Dictionary of Fundamental Units ###
 

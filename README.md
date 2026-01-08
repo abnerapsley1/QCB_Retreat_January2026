@@ -3,7 +3,7 @@
   <img src="Images/FULL_QCB_Retreat_01_26_2026.png" alt="The Whole-Cell Model">
 
   <figcaption>
-    <strong>Figure 1:</strong> The Whole-Cell Model.
+    <strong>Figure 1:</strong> The Whole-Cell Model
   </figcaption>
 </figure>
 
@@ -20,7 +20,7 @@ All whole-cell models require both a definition of and initial conditions for th
   <img src="Images/ONE_QCB_Retreat_01_26_2026.png" alt="The Whole-Cell Model: The Cell State and Initialization">
 
   <figcaption>
-    <strong>Figure 2:</strong> The Cell State and Initialization.
+    <strong>Figure 2:</strong> The Cell State and Initialization
   </figcaption>
 </figure>
 
@@ -28,7 +28,6 @@ All whole-cell models require both a definition of and initial conditions for th
 Defining the cell state is accomplished first by defining hierarchical levels of organization. These levels can vary across whole-cell models, but should encompass the most fine-grained level of organization (can be atoms or "effective" atoms) through the most coarse-grained level (usualy the cell itself). Not only do hierarchical levels of organization need to be defined, but so do the "laws" or computational procedures that define how fundamental units at one level of organization emerge from lower level fundamental units. In general, these laws are well defined for lower levels of organization such as how atoms make up molecules, but they are less well defined for higher levels of organization such as how a group of individual molecules constitute a subcellular organelle.
 
 Individual labs and teams can contribute to this aspect of whole-cell modeling by developing theoretical models of how higher levels of organization emerge from lower levels of organization. For example, what are the computational procedures that can be used to convert information about the numbers and locations of specific molecules in a cell into information about the state of the subcellular organelles? Likewise, how can information about the organelles and molecules in a cell be used to define the cell type being studied or simulated?
-
 
 ### Dictionary of Fundamental Units ###
 Each hierarchical level of organization within a whole-cell model contains "fundamental units". These are the individual objects within the specified level and correspond to physical entities within the cell. For example, at the organizational level of "Molecules", fundamental units may include various metabolites, proteins, genes, RNA molecules, etc. Additionally, at the level of "Organelles", examples of fundamental units may be the plasma membrane, nucleus, mitochondria, etc. Each fundamental unit at each level of organization should have a "type" to distinguish itself from other fundamental units. Each type of fundamental unit can then be assigned an arbitrary amount of defining information such as atomic radius, charge, mass, amino acid sequence, standardized nomenclature, etc.
@@ -38,13 +37,30 @@ A critical component of defining the cell state in a whole-cell model is a dicti
 Individual labs and teams can contribute to this aspect of whole-cell modeling in a variety of ways. For example, all molecular species and molecular complexes within a whole-cell model need to be documented. If a lab is studying specific biological pathways or reactions, the lab can gather information about molecular species included in these reactions. Such information may include DNA-protein binding partners, stoichiometric ratios of protein complexes, or the identity of various RNA or protein isoforms. Similarly, if a lab is focused on the study of subcellular organelles, information about the sizes, molecular compositions, or functions can be used in the dictionary of fundamental units. 
 
 ### Initial Conditions ###
+The hierarchical levels of organization and dictionary of fundamental units is required to defined the "cell state". The cell state is the overall description of the cell at every hierarchical level of organization, and as such, is composed of a list of all fundamental units present in the cell within each level. Each instance of a fundamental unit can also be supplied with information about its type, relationship with other fundamental units, and time-dependent properties. 
 
+The status of the cell state at the beginning of the simulation (initial conditions of the cell state) must be defined before the simulation of the whole-cell model can take place. This requires information about both the abundances and locations of each type of fundamental unit.
+
+Individual labs and teams can contribute to this aspect of whole-cell modeling in a variety of ways. First, labs that work with high-dimensional -omics data can perform experiments to determine the abundances (absolute or relative) of a wide variety of molecules within the cell. Next, labs which perform microscopy experiments can help determine initial locations of molecules and subcellular organelles. Microscopy labs can also help determine the architecture or geometries of both organelles and of the cell as a whole. This information can be used to set the initial conditions of the cell state.
 
 ## Cellular Processes ##
+Once the cell state has been defined and initialized, computational procedures for the time evolution of the cell state are needed. Here, we will refer to these procedures as "cellular processes". Essentially, cellular processes are computational algorithms that use various aspects of the most recent cell state as input and predict cell state variables at a specified time in the future. Cellular processes can be as fine- or coarse-grained as needed. Cellular processes may also receive input and produce output from multiple levels of organization of the cell state. Although not necessary, cellular processes can correspond to specific biological processes such as DNA replication, transcription, translation, signal transduction, cell profileration, etc.
+
+<figure>
+  <img src="Images/TWO_QCB_Retreat_01_26_2026.png" alt="The Whole-Cell Model: Cellular Processes">
+
+  <figcaption>
+    <strong>Figure 3:</strong> Cellular Processes
+  </figcaption>
+</figure>
 
 ### Molecular Dynamics ###
+A time-dependent property of the cell state is the location of each molecule within the cell. It is therefore important to understand how these molecular locations change with time. A well-established variety of methods called molecular dynamics can be used for such cellular processes. 
+
 
 ### Chemical Kinetics or Chemical Reaction Dynamics ###
+Another time-dependent property of the cell state is the abundance of each molecule within the cell. 
+
 
 ### Dynamics of Subcellular Organelles ###
 

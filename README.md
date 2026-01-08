@@ -44,7 +44,7 @@ The status of the cell state at the beginning of the simulation (initial conditi
 Individual labs and teams can contribute to this aspect of whole-cell modeling in a variety of ways. First, labs that work with high-dimensional -omics data can perform experiments to determine the abundances (absolute or relative) of a wide variety of molecules within the cell. Next, labs which perform microscopy experiments can help determine initial locations of molecules and subcellular organelles. Microscopy labs can also help determine the architecture or geometries of both organelles and of the cell as a whole. This information can be used to set the initial conditions of the cell state.
 
 ## Cellular Processes ##
-Once the cell state has been defined and initialized, computational procedures for the time evolution of the cell state are needed. Here, we will refer to these procedures as "cellular processes". Essentially, cellular processes are computational algorithms that use various aspects of the most recent cell state as input and predict cell state variables at a specified time in the future. Cellular processes can be as fine- or coarse-grained as needed. Cellular processes may also receive input and produce output from multiple levels of organization of the cell state. Although not necessary, cellular processes can correspond to specific biological processes such as DNA replication, transcription, translation, signal transduction, cell profileration, etc.
+Once the cell state has been defined and initialized, computational procedures for the time evolution of the cell state are needed (see Figure 3). Here, we will refer to these procedures as "cellular processes". Essentially, cellular processes are computational algorithms that use various aspects of the most recent cell state as input and predict cell state variables at a specified time in the future. Cellular processes can be as fine- or coarse-grained as needed. Cellular processes may also receive input and produce output from multiple levels of organization of the cell state. Although not necessary, cellular processes often correspond to specific biological processes such as molecular diffusion, DNA replication, transcription, translation, signal transduction, cell profileration, etc.
 
 <figure>
   <img src="Images/TWO_QCB_Retreat_01_26_2026.png" alt="The Whole-Cell Model: Cellular Processes">
@@ -55,15 +55,29 @@ Once the cell state has been defined and initialized, computational procedures f
 </figure>
 
 ### Molecular Dynamics ###
-A time-dependent property of the cell state is the location of each molecule within the cell. It is therefore important to understand how these molecular locations change with time. A well-established variety of methods called molecular dynamics can be used for such cellular processes. 
+An important time-dependent property of the cell state is the location of each atom or molecule within the cell. Therefore, it is important to understand how these atomic and molecular locations change with time. A well-established variety of molecular dynamics methods can be used for such cellular processes. Not all molecules or processes within a whole-cell model require this level of granularity, but for the processes that are highly dependent on molecular locations, molecular dynamics methods offer a useful solution.
+
+Molecular dynamics simulations have varying levels of granularity in their fundamental units. Some simulations such as "all-atom" simulations track the location of individual atoms within molecules while other simulations use coarse-grained "beads" which represent multiple atoms as their fundamental units.
+
+Using molecular dynamics simulations in whole-cell models is an active field of research with some difficulties arising due to the discrepancy of timescales for molecular and cellular simulations. Molecular simulations require a large amount of computational power and therefore can only be performed across small timescales. However, in order to perform simulations of whole-cell models, timescales corresponding to hours are often needed. 
+
+Another benifit of molecular dynamics simulations is their ability to estimate diffusion coefficients and association/disassociation rates of molecules and molecular complexes. These simulations can be performed completely separate from a simulation of a whole-cell model, and their results can be used in creating a dictionary of the types and properties of fundamental units, as described above.
+
+Labs and teams that have expertise in molecular dynamics can contribute to the construction of whole-cell models by developing methods for integrating molecular dynamics simulations with whole-cell model simulations. In addition, these labs and teams may contribute by determining rate constants and diffusion coefficients for specific association reactions and molecules, respectively.
 
 
 ### Chemical Kinetics or Chemical Reaction Dynamics ###
-Another time-dependent property of the cell state is the abundance of each molecule within the cell. 
+Another time-dependent property of the cell state is the abundance of each molecule within the cell. The evolution of molecular abundances is governed by the kinetics of chemical reactions, where molecules of one type are converted into molecules of a different type. 
+
+Defining how molecules can be interconverted requires a variety of steps. First, researchers must construct a reaction network that defines all the possible reactions that can take place within the cell. Although much progress has been made in determining metabolic reaction networks, much work is still needed to define and refine reaction networks for the processes of DNA replication, gene regulation, transcription, translation, post-transcriptional and post-translational modifications, signal transduction, and molecular complex formation. Adding further complication to this process is the fact that many cell types have unique reaction networks, or reaction networks that are slightly different from other cell types. This is true both within and across species. Second, kinetic parameters that define the rates of these reactions must be determined. This is often done experimentally and can be both time- and labor-intensive. Other methods for determining kinetic parameters for chemical reactions include using specialized reactive force fields such as ReaxFF, quantum mechanics/molecular mechanics methods, or machine-learning methods. Third, the computational procedure for simulating chemical reactions needs to be determined. 
+
+
 
 
 ### Dynamics of Subcellular Organelles ###
 
+
+Included in this category is also a description of how the overall cellular architecture evolves over time. 
 
 ## Whole-Cell Simulations ##
 

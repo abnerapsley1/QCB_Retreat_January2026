@@ -80,6 +80,8 @@ Defining how molecules can be interconverted requires a variety of steps. First,
 Included in this category is also a description of how the overall cellular architecture evolves over time. 
 
 ## Whole-Cell Simulations ##
+Once the cell state is define and initialized, and all computational procedures for the time-evolution of the cell state are in place, a whole-cell model must be realized or simulated using high-performance computing (see Figure 4). In order to perform whole-cell model simulations, hardware and infrastructure must be procured, computational software must be designed, and computational frameworks and pipelines must be established. 
+
 
 <figure>
   <img src="Images/THREE_QCB_Retreat_01_26_2026.png" alt="The Whole-Cell Model: Whole-Cell Simulations">
@@ -97,6 +99,7 @@ Included in this category is also a description of how the overall cellular arch
 
 
 ## Model Predictions and Output ##
+After whole-cell simulations are complete, model output should be converted into understandable and actionable information (see Figure 5). For this to take place, model output must be statistically analyzed, visualized, and compared with experimental results.
 
 <figure>
   <img src="Images/FOUR_QCB_Retreat_01_26_2026.png" alt="The Whole-Cell Model: Model Predictions and Output">

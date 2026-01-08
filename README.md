@@ -67,6 +67,14 @@ Another time-dependent property of the cell state is the abundance of each molec
 
 ## Whole-Cell Simulations ##
 
+<figure>
+  <img src="Images/THREE_QCB_Retreat_01_26_2026.png" alt="The Whole-Cell Model: Whole-Cell Simulations">
+
+  <figcaption>
+    <strong>Figure 4:</strong> Whole-Cell Simulations
+  </figcaption>
+</figure>
+
 ### Hardware and Infrastructure ###
 
 ### Computational Software ###
@@ -75,6 +83,14 @@ Another time-dependent property of the cell state is the abundance of each molec
 
 
 ## Model Predictions and Output ##
+
+<figure>
+  <img src="Images/FOUR_QCB_Retreat_01_26_2026.png" alt="The Whole-Cell Model: Model Predictions and Output">
+
+  <figcaption>
+    <strong>Figure 5:</strong> Model Predictions and Output
+  </figcaption>
+</figure>
 
 ### Visualization ###
 

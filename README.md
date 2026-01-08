@@ -3,7 +3,7 @@
   <img src="Images/FULL_QCB_Retreat_01_26_2026.png" alt="The Whole-Cell Model">
 
   <figcaption>
-    <strong>Fig 1:</strong> This is the caption for the image above.
+    <strong>Figure 1:</strong> The Whole-Cell Model.
   </figcaption>
 </figure>
 
@@ -16,7 +16,13 @@ The overall aim of a whole-cell model is to provide a comprehensive description 
 ## The Cell State and Initialization ##
 All whole-cell models require both a definition of and initial conditions for the cell state. 
 
-![Demo Image](Images/ONE_QCB_Retreat_01_26_2026.png)
+<figure>
+  <img src="Images/ONE_QCB_Retreat_01_26_2026.png" alt="The Whole-Cell Model: The Cell State and Initialization">
+
+  <figcaption>
+    <strong>Figure 2:</strong> The Cell State and Initialization.
+  </figcaption>
+</figure>
 
 ### Hierarchical Levels of Organization ###
 Defining the cell state is accomplished first by defining hierarchical levels of organization. These levels can vary across whole-cell models, but should encompass the most fine-grained level of organization (can be atoms or "effective" atoms) through the most coarse-grained level (usualy the cell itself). Not only do hierarchical levels of organization need to be defined, but so do the "laws" or computational procedures that define how fundamental units at one level of organization emerge from lower level fundamental units. In general, these laws are well defined for lower levels of organization such as how atoms make up molecules, but they are less well defined for higher levels of organization such as how a group of individual molecules constitute a subcellular organelle.

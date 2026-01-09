@@ -73,15 +73,14 @@ Defining how molecules can be interconverted requires a variety of steps. First,
 
 Labs and teams can contribute to this aspect of whole-cell modeling in a variety of ways. First, labs that have the ability to delineate the subreactions that comprise biological processes can help generate detailed reaction networks. For example, labs that can uncover the order of reactions that lead to formation of protein-protein complexes can help construct realistic reaction networks that can be used to determine possible molecular transition pathways. Similarly, labs that specialize in studying gene regulation can construct detailed reaction networks that describe how transcription factors bind to DNA, histone modifications are performed, or DNA methylation markers are edited. Second, there exists an critical need for an enormous number of accurate kinetic parameters for a host of biological reactions. For example, of the ~16,000 biological reactions annotated for human cells in the Reactome database, only a very small minority of them have accurate kinetic parameters. Similarly, there exists a dearth of kinetic parameters for enzyme-catalyzed metabolic reactions for many cell types and organisms. Groups that have the ability to perform experiments or simulations that produce these missing kinetic parameters can work with groups that are building whole-cell models to determine which reactions are most critical to have accurate kinetic parameters.
 
-
-
-
-
-
 ### Dynamics of Subcellular Organelles ###
+Whole-cell models also require information on the dynamic behaviors of subcellular organelles. Organelle geometries, locations, interactions, and molecular compositions all change as a function of time, and computational procedures that define how these processes unfold are critical for building whole-cell models. Information on organelle dynamics is important for both prokaryotic and eukaryotic cells. Although prokaryotic cells only contain a plasma membrane and cytosol, these "organelles" do change over time and these changes are vital aspects of the cell state and cellular functioning. Furthermore, understanding organelle dynamics becomes even more important when constructing eukaryotic whole-cell models because eukaryotes contain a wide array of organelles, each with its own unique functions.  
 
+Much of the previous work on organelle dynamics has been focused on how organelles change during the process of mitosis. 
 
 Included in this category is also a description of how the overall cellular architecture evolves over time. 
+
+Additionally, we are interested in understanding the process of cell division or proliferation. 
 
 ## Whole-Cell Simulations ##
 Once the cell state is define and initialized, and all computational procedures for the time-evolution of the cell state are in place, a whole-cell model must be realized or simulated using high-performance computing (see Figure 4). In order to perform whole-cell model simulations, hardware and infrastructure must be procured, computational software must be designed, and computational frameworks and pipelines must be established. 

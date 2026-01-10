@@ -76,14 +76,14 @@ Labs and teams can contribute to this aspect of whole-cell modeling in a variety
 ### Dynamics of Subcellular Organelles ###
 Whole-cell models also require information on the dynamic behaviors of subcellular organelles. Organelle geometries, locations, interactions, and molecular compositions all change as a function of time, and computational procedures that define how these processes unfold are critical for building whole-cell models. Information on organelle dynamics is important for both prokaryotic and eukaryotic cells. Although prokaryotic cells only contain a plasma membrane and cytosol, these "organelles" do change over time and these changes are vital aspects of the cell state and cellular functioning. Furthermore, understanding organelle dynamics becomes even more important when constructing eukaryotic whole-cell models because eukaryotes contain a wide array of organelles, each with its own unique functions.  
 
-Much of the previous work on organelle dynamics has been focused on how organelles change during the process of mitosis. 
+Much of the previous work on organelle dynamics has been focused on how organelles change during the process of mitosis. However, organelles also exhibit dynamic behavior within other phases of the cell cycle (i.e., G1, S, and G2). Laws governing the dynamics of organelles across the entirety of the cell cycle are needed for the generation of whole-cell models. 
 
-Included in this category is also a description of how the overall cellular architecture evolves over time. 
+Included in this category is also a description of how the overall cellular architecture evolves over time. This includes both the geometry of the plasma membrane as well as the process of cell division or proliferation. 
 
-Additionally, we are interested in understanding the process of cell division or proliferation. 
+Individual labs and teams that study any aspect of organelle dynamics can contribute significantly to whole-cell modeling efforts. The molecular composition and geometries of membrane-bound organelles can be determined for various cell types by experimental efforts such as organelle isolation/fractionation and a combination of lipidomic and proteomic analyses. Microscopy methods are also invaluable in studying organelle geometries. Especially important are time-series experiments in which organelle information at multiple times across the cell cycle can be determined. Additionally, mathematical or computational models for the dynamic behavior of organelles and overall cellular architectures need to be established. Close collaboration between experimental and theoretical groups will hopefully lead to the development of dynamic models to predict organelle and overall cell dynamics.
 
 ## Whole-Cell Simulations ##
-Once the cell state is define and initialized, and all computational procedures for the time-evolution of the cell state are in place, a whole-cell model must be realized or simulated using high-performance computing (see Figure 4). In order to perform whole-cell model simulations, hardware and infrastructure must be procured, computational software must be designed, and computational frameworks and pipelines must be established. 
+Once the cell state is define and initialized, and all computational procedures for the time-evolution of the cell state are in place, a whole-cell model must be realized or simulated using high-performance computing (see Figure 4). In order to perform whole-cell model simulations, hardware and infrastructure must be procured, computational software must be designed, and computational frameworks and pipelines must be established. In this area of whole-cell modeling, two main concerns are as follows: (1) reducing simulation times and costs and (2) ensuring all computational frameworks are user-friendly, reusable, and reproducible.
 
 
 <figure>
@@ -95,14 +95,19 @@ Once the cell state is define and initialized, and all computational procedures 
 </figure>
 
 ### Hardware and Infrastructure ###
+Computational hardware and infrastructure used for whole-cell modeling
+
 
 ### Computational Software ###
+While previous sections described the computational procedures that predict the time-evolution of the cell state, often these procedures are realized through the implementation of specific software. Examples of this are LAMMPS or GROMACS for molecular dynamics, Lattice Microbes for chemical kinetics, and MitoTNT for tracking mitochondrial dynamics. However, presently, there are many cellular processes in whole-cell modeling that do not have dedicated software. Whole-cell modeling requires the development and maintenance of both existing and new software to efficiently perform the computations required for cellular processes. 
+
+Labs and teams that have expertise in software development and maintanence can contribute to whole-cell modeling efforts. By working closely with groups involved in defining cellular processes, labs with software expertise can develop specialized software that is both useful and efficient. Additionally, the collaboration of labs and groups that work with either hardware or software can further optimize the software being constructed for specific hardware that will be used in whole-cell simulations.
 
 ### Computational Frameworks and Pipelines ###
-
+After computational hardware and software have been procured and developed, whole-cell models require the creation of computational frameworks or pipelines that are both efficient and user-friendly. 
 
 ## Model Predictions and Output ##
-After whole-cell simulations are complete, model output should be converted into understandable and actionable information (see Figure 5). For this to take place, model output must be statistically analyzed, visualized, and compared with experimental results.
+After whole-cell simulations are complete, model output should be converted into understandable and actionable information (see Figure 5). For this to take place, model output must be statistically analyzed, visualized, and compared with experimental results. Both existing and novel methods can be used to statistically analyze the vast amount of data generated by whole-cell models. 
 
 <figure>
   <img src="Images/FOUR_QCB_Retreat_01_26_2026.png" alt="The Whole-Cell Model: Model Predictions and Output">
@@ -112,9 +117,9 @@ After whole-cell simulations are complete, model output should be converted into
   </figcaption>
 </figure>
 
-### Visualization ###
-
 ### Statistical Analysis and Interpretations ###
+
+### Visualization ###
 
 ### Comparison with Experimental Results ###
 

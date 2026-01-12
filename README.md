@@ -1,4 +1,4 @@
-# UIUC's STC QCB Retreat - January 26, 2026 #
+# UIUC's STC QCB Retreat - January, 2026 #
 <figure>
   <img src="Images/FULL_QCB_Retreat_01_26_2026.png" alt="The Whole-Cell Model">
 
